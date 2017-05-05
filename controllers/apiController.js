@@ -1,3 +1,6 @@
+var Todos = require('../models/todo');
+var bodyParser = require('body-parser');
+
 module.exports = function(app) {
 
   app.use(bodyParser.json());
@@ -8,7 +11,6 @@ module.exports = function(app) {
     Todos.find({ username: req.params.uname },
       function(err, todos) {
         if (err) throw err;
-
         res.send(todos);
       });
   });
@@ -17,7 +19,6 @@ module.exports = function(app) {
 
     Todos.findById({ _id: req.params.id }, function(err, todo) {
       if (err) throw err;
-
       res.send(todo);
     });
   });
@@ -31,7 +32,6 @@ module.exports = function(app) {
         hasAttachment: req.body.hasAttachment
       }, function(err, todo) {
         if (err) throw err;
-
         res.send('Success!');
       });
     }
@@ -43,6 +43,7 @@ module.exports = function(app) {
         hasAttachment: req.body.hasAttachment
       });
       newTodo.save(function(err) {
+        if (err) throw err;
         res.send('Success!');
       });
     }
