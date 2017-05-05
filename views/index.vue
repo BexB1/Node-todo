@@ -1,7 +1,11 @@
 <template lang="html">
-  <div>
-    <h1>Stuff in the View.</h1>
-  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Stuff in the View.</h1>
+        <button class="btn btn-primary">Poosh battan</button>
+      </div>
+    </div>
 </template>
 
 <script>

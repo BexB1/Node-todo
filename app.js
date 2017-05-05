@@ -9,7 +9,7 @@ var apiController = require('./controllers/apiController');
 
 var port = process.env.PORT || 3000;
 
-// app.use('/assets', express.static(__dirname + '/public'));
+app.use('/assets', express.static(__dirname + '/assets'));
 
 var expressVue = require('express-vue');
 app.engine('vue', expressVue);
