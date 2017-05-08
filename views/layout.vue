@@ -11,6 +11,7 @@
     <body>
       {{{app}}}
       {{{script}}}
+      <script src="../build/bundle.js"></script>
     </body>
   </html>
 </template>

@@ -8,17 +8,25 @@ var config = {
   },
   module: {
     loaders: [
-      // {
-      //   test: /\.js$/,
-      //   loader: 'babel-loader',
-      //   exclude: /node_modules/
-      // },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.vue$/,
         loader: 'vue-loader'
       },      
       { test: /\.json$/, 
         loader: 'json-loader' 
+      },
+      {
+        test: /\.scss$/,
+        loader: 'sass-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader'
       }
     ]
   },

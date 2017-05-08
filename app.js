@@ -10,6 +10,7 @@ var apiController = require('./controllers/apiController');
 var port = process.env.PORT || 3000;
 
 app.use('/assets', express.static(__dirname + '/assets'));
+app.use('/build', express.static(__dirname + '/build'));
 
 var expressVue = require('express-vue');
 app.engine('vue', expressVue);
@@ -29,5 +30,3 @@ app.use('/', routes);
 app.listen(port, function() {
   console.log("App listening on port 3000, cap'n.")
 })
-
-console.log("lol");
