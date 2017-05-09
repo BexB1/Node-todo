@@ -12,8 +12,8 @@ var port = process.env.PORT || 3000;
 app.use('/assets', express.static(__dirname + '/assets'));
 app.use('/build', express.static(__dirname + '/build'));
 
-var expressVue = require('express-vue');
-app.engine('vue', expressVue);
+var vue = require('vue');
+app.engine('vue', vue);
 app.set('view engine', 'vue');
 app.set('views', path.join(__dirname, '/views'));
 app.set('vue', {

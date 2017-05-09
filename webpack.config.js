@@ -31,7 +31,7 @@ var config = {
     ]
   },
   resolve: {
-    extensions: ['.webpack.js', '.web.js', '.js', '.json']
+    extensions: ['.js', '.json']
   },
   node: {
     // console: 'true',
